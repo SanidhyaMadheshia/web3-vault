@@ -23,7 +23,7 @@ export const connectWallet = async()=>{
      const dataSignature = {
       signature
      }
-     const url=`https://web3-vault-render.onrender.com/api/authentication?address=${selectedAccount}`
+     const url=`https://web3-vault-back.vercel.app/api/authentication?address=${selectedAccount}`
      const res = await axios.post(url,dataSignature)
      const token = res.data.token
      

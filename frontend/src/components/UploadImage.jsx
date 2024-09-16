@@ -23,7 +23,7 @@ const UploadImage = ({reloadEffect}) => {
             setLoading(true)
             const formData = new FormData();
             formData.append("file",file)
-            const url=`https://web3-vault-render.onrender.com/api/uploadImage`
+            const url=`https://web3-vault-back.vercel.app/api/uploadImage`
             const token = localStorage.getItem("token")
             
             const config={
