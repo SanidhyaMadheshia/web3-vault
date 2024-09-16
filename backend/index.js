@@ -14,7 +14,6 @@ const corsOptions = {
     credentials: true  // Allow credentials (cookies, tokens, etc.)
   }
 
-
 app.use(cors(corsOptions))
 app.use(express.json())
 
