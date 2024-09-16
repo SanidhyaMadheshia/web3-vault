@@ -9,14 +9,19 @@ const getImageRoute = require('./routes/getImageRoute');
 const app = express();
 
 // CORS options to allow all origins
-const corsOptions = {
-    origin: '*',  // Allow all origins
-    methods: 'GET, POST, PUT, DELETE',  // Allowed methods
-    allowedHeaders: 'Content-Type, Authorization',  // Allowed headers
-    credentials: true  // Allow credentials (cookies, tokens, etc.)
-};
+// const corsOptions = {
+//     origin: '*',  // Allow all origins
+//     methods: 'GET, POST, PUT, DELETE',  // Allowed methods
+//     allowedHeaders: 'Content-Type, Authorization',  // Allowed headers
+//     credentials: true  // Allow credentials (cookies, tokens, etc.)
+// };
 
-app.use(cors(corsOptions));  // Apply CORS middleware globally
+// app.use(cors(corsOptions));  // Apply CORS middleware globally
+
+app.use(cors({
+  origin: '*', // Or specify the allowed origins
+  allowedHeaders: ['Content-Type', 'Authorization', 'x-access-token'],
+}));
 
 app.use(express.json());
 
