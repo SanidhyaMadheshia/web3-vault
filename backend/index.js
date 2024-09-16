@@ -7,7 +7,15 @@ const authenticationRoute=require('./routes/authenticationRoute')
 const uploadImageRoute=require('./routes/uploadImageRoute')
 const getImageRoute=require('./routes/getImageRoute')
 
-app.use(cors())
+const corsOptions = {
+    origin: 'https://web3-vault-render.onrender.com',  // Only allow this domain
+    methods: 'GET, POST, PUT, DELETE',  // Allowed methods
+    allowedHeaders: 'Content-Type, Authorization',  // Allowed headers
+    credentials: true  // Allow credentials (cookies, tokens, etc.)
+  }
+
+
+app.use(cors(corsOptions))
 app.use(express.json())
 
 app.use('/api',authenticationRoute)

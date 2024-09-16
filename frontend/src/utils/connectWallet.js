@@ -2,6 +2,7 @@ import {ethers} from "ethers"
 import contractAbi from "../constants/contractAbi.json"
 import toast from "react-hot-toast"
 import axios from "axios"
+// import { cors} from "cors"
 export const connectWallet = async()=>{
  try {
     
