@@ -13,6 +13,9 @@ const corsOptions = {
     allowedHeaders: 'Content-Type, Authorization',  // Allowed headers
     credentials: true  // Allow credentials (cookies, tokens, etc.)
   }
+app.get('/', (req ,res)=> {
+    res.send(<h1> hi </h1>);
+})
 
 app.use(cors(corsOptions))
 app.use(express.json())
