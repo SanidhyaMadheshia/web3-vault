@@ -15,7 +15,9 @@ const corsOptions = {
   }
 
 
-app.use(cors(corsOption))
+// app.use(cors(corsOption))
+app.options('*', cors(corsOptions)); // Enable pre-flight requests for all routes
+
 app.use(express.json())
 
 app.use('/api',authenticationRoute)
